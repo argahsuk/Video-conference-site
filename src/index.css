@@ -1,0 +1,112 @@
+*{
+  margin: 0;
+}
+.card-container{
+  background-color: #faedcd;
+  height: auto;
+  justify-content: space-around;
+  display: grid;
+  grid-template-columns: auto auto auto;
+} 
+.card{
+  border:1px solid rgb(202, 197, 197);
+  border-radius:10px;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+  padding: 20px;
+  margin:20px;
+  text-align: center;
+  display:inline-block;
+  background-color: #e9edc9;
+}
+.card .card-image{
+  height: 25vh;
+  margin-bottom: 10px;
+  width: 20vw;
+  border-radius:10px;
+
+}
+.card .card-title{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: #bc6c25;
+ font-weight: 750; 
+}
+
+/* home and video */
+body {
+margin: 0;
+background: #f0f0f0;
+}
+
+.container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 75vh;
+gap: 20px;
+}
+.form-group {
+display: flex;
+gap: 10px;
+}
+
+input {
+padding: 10px;
+border-radius: 4px;
+border: 1px solid #aaa;
+width: 200px;
+}
+
+button {
+padding: 10px 16px;
+border: none;
+border-radius: 4px;
+background: #007bff;
+color: white;
+}
+
+button.create-btn {
+background: #28a745;
+}
+
+.video-grid {
+display: flex;
+gap: 20px;
+}
+
+video {
+width: 30vw;
+height: 35vh;
+background: black;
+border: 2px solid #ccc;
+border-radius: 6px;
+}
+
+.controls {
+display: flex;
+gap: 15px;
+}
+
+button.end {
+background: #dc3545;
+width: auto;
+}
+button.end img{
+width: 2vw;
+}
+button.mute {
+background: #ffc107;
+color: black;
+width: auto;
+}
+button.mute img{
+width: 2vw;
+}
+button.video-off {
+background: #6f42c1;
+width: auto;
+}
+button.video-off img{
+width: 2vw;
+}
