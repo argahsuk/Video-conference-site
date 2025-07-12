@@ -26,7 +26,7 @@ function Nav() {
           <a href="/c" style={style}>Contacts</a>
         </div>
         <div style={{ color: '#fb4b2cff', fontWeight: 'bold', fontSize: '48px' }}>
-          Face2Face
+          Face 2 <br />Face
         </div>
       </div>
     </>
