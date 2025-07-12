@@ -9,7 +9,8 @@ import mute from "../assets/mute.png";
 import end from "../assets/end.png";
 
 // Connect to signaling server
-const socket = io("http://localhost:5000");
+const socket = io("https://video-conference-back.onrender.com");
+
 
 function Room() {
   const { id } = useParams();                   // Room ID from URL
