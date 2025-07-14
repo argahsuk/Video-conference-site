@@ -1,4 +1,4 @@
-import logo from "D:/study/own/PROJECTS/WEB DEV PROJECTS/video_call/vdo/src/assets/logo.jpg"
+import logo from "../assets/logo.jpg"
 function Nav() {
   const main_style = {
     backgroundColor: '#264653',
