@@ -1,3 +1,4 @@
+import logo from "D:/study/own/PROJECTS/WEB DEV PROJECTS/video_call/vdo/src/assets/logo.jpg"
 function Nav() {
   const main_style = {
     backgroundColor: '#264653',
@@ -25,8 +26,9 @@ function Nav() {
           <a href="https://agraPortfolio.netlify.app" style={style} target="_blank" rel="noreferrer">aboutDeveloper</a>
           <a href="/c" style={style}>Contacts</a>
         </div>
-        <div style={{ color: '#fb4b2cff', fontWeight: 'bold', fontSize: '48px' }}>
-          Face 2 <br />Face
+        <div  className="logo">
+          {/* Face 2 <br />Face */}
+          <a href="/"><img src={logo} alt="" style={{borderRadius:"5vh",width:"6vw"}} className="logoimg"/></a>
         </div>
       </div>
     </>

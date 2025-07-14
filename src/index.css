@@ -110,3 +110,21 @@ width: auto;
 button.video-off img{
 width: 2vw;
 }
+
+/* logo */
+.logo{
+  padding-right: 6vw;
+}
+@media (max-width: 1200px) {
+  .logoimg{
+    width: 9vw;
+  }
+  
+  .logo{padding-right: 0;}
+}
+@media (max-width: 800px) {
+  .logoimg{
+    width: 20vw;
+  }
+  .logo{padding-right: 0;}
+}
