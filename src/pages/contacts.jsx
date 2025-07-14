@@ -1,52 +1,56 @@
+import React from 'react';
+
 function Contacts() {
-    return (
-        <div className="card-container">
+  return (
+    <div className="contacts-wrapper">
+      <h1 className="contacts-heading">Connect with Me</h1>
+      <div className="card-container">
 
-            <a href="https://www.linkedin.com/in/kushagra512?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-                <div className="card">
-                    <img src="/public/linkedin.png" alt="" className="card-image" />
-                    <h2 className="card-title">Linkedin</h2>
-                </div>
-            </a>
-           
-            <a href="https://github.com/argahsuk">
-                <div className="card">
-                    <img src="/public/github.png" alt="" className="card-image" />
-                    <h2 className="card-title">Git-Hub</h2>
-                </div>
-            </a>
-          
-            <a href="mailto:kushagra.dd24.cs@nitp.ac.in" >
-                <div className="card">
-                    <img src="/public/mail.png" alt="" className="card-image" />
-                    <h2 className="card-title">E-mail</h2>
-                </div>
-            </a>
-          
-            <a href="https://www.instagram.com/_argahsuk" >
-                <div className="card">
-                    <img src="/public/insta.png" alt="" className="card-image" />
-                    <h2 className="card-title">Instagram</h2>
-                </div>
-            </a>
-           
-            <a href="https://t.me/Argahsuk" >
-                <div className="card">
-                    <img src="/public/tele.png" alt="" className="card-image" />
-                    <h2 className="card-title">Telegram</h2>
-                </div>
-            </a>
-            
-            <a href="https://x.com/agrakush4?t=QyAK1QcYvT1GwXtZFLL-Xg&s=09" >
-                <div className="card">
-                    <img src="/public/x.jpeg" alt="" className="card-image" />
-                    <h2 className="card-title">Twitter/X</h2>
-                </div>
-            </a>
+        <a href="https://www.linkedin.com/in/kushagra512" target="_blank" rel="noopener noreferrer">
+          <div className="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" className="card-image" />
+            <h2 className="card-title">LinkedIn</h2>
+          </div>
+        </a>
 
+        <a href="https://github.com/argahsuk" target="_blank" rel="noopener noreferrer">
+          <div className="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" className="card-image" />
+            <h2 className="card-title">GitHub</h2>
+          </div>
+        </a>
 
+        <a href="mailto:kushagra.dd24.cs@nitp.ac.in">
+          <div className="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" className="card-image" />
+            <h2 className="card-title">E-mail</h2>
+          </div>
+        </a>
 
-        </div>
-    )
+        <a href="https://www.instagram.com/_argahsuk" target="_blank" rel="noopener noreferrer">
+          <div className="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" className="card-image" />
+            <h2 className="card-title">Instagram</h2>
+          </div>
+        </a>
+
+        <a href="https://t.me/Argahsuk" target="_blank" rel="noopener noreferrer">
+          <div className="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" className="card-image" />
+            <h2 className="card-title">Telegram</h2>
+          </div>
+        </a>
+
+        <a href="https://x.com/agrakush4" target="_blank" rel="noopener noreferrer">
+          <div className="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="X / Twitter" className="card-image" />
+            <h2 className="card-title">Twitter/X</h2>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  );
 }
+
 export default Contacts;
