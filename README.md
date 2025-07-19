@@ -1,10 +1,21 @@
-# Video-conference-site
+# Face2Face – Video Conferencing App
 
-## Built with React + Vite
+Face2Face is a **real-time video conferencing web app** built with **React, WebRTC, and Socket.IO**.  
+It lets users create or join a room using a unique Room ID and supports essential features like **mute/unmute, video on/off, and ending the call**.
 
-This project uses Vite for fast development with HMR.
+---
 
-Currently, two official plugins are available:
+## 🚀 Features
+- **Peer-to-Peer Video Calls** using WebRTC.
+- **Create or Join Rooms** via unique Room IDs.
+- **Mute / Unmute microphone** (with visual feedback).
+- **Turn camera on/off** (without disconnecting).
+- **Non-blocking toast notifications** for status updates (using Toastr).
+- **Automatic connection handling** with Socket.IO signaling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## 🛠️ Tech Stack
+- **Frontend:** React (Vite)
+- **Backend:** Node.js + Express + Socket.IO (signaling server)
+
