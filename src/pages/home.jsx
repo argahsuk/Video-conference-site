@@ -2,6 +2,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
+
+
 function Home()  {
   const [roomId,setRoomId]=useState("")
   const navigate=useNavigate()
@@ -9,12 +13,14 @@ function Home()  {
   const handleJoin=()=>{
     if (roomId.trim()) {//just not spaces
       navigate(`/room/${roomId}`)
+      toastr.success("Room Joined");
     }
   }
-
+  
   const handleCreate=()=>{
     const newId=uuidv4()
     navigate(`/room/${newId}`);
+    toastr.success("New Room Created");
   }
 
   return (

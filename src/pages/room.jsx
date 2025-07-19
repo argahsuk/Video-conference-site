@@ -2,15 +2,26 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
 
+
 import off from "../assets/camera-off.png";
 import on from "../assets/camera-on.png";
 import unmute from "../assets/mic.png";
 import mute from "../assets/mute.png";
 import end from "../assets/end.png";
 
+// Configure toastr (optional styling)
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
+toastr.options = {
+  closeButton: false,
+  progressBar: true,
+  positionClass: "toast-top-center",
+  timeOut: "3000",
+  preventDuplicates: true,
+};
+
 // Connect to signaling server
 const socket = io("https://video-conference-back.onrender.com");
-
 
 function Room() {
   const { id } = useParams();                   // Room ID from URL
@@ -106,7 +117,15 @@ function Room() {
     mediaStream.getAudioTracks().forEach((track) => {
       track.enabled = !track.enabled;
     });
-    setIsAudioMuted((prev) => !prev);
+    setIsAudioMuted((prev) => {
+      const newMuted = !prev;
+      if (newMuted) {
+        toastr.info("Audio muted");
+      } else {
+        toastr.success("Audio unmuted");
+      }
+      return newMuted;
+    });
   };
 
   const toggleVideo = () => {
@@ -114,7 +133,15 @@ function Room() {
     mediaStream.getVideoTracks().forEach((track) => {
       track.enabled = !track.enabled;
     });
-    setIsVideoOff((prev) => !prev);
+    setIsVideoOff((prev) => {
+      const newVideoOff = !prev;
+      if (newVideoOff) {
+        toastr.warning("Video turned off");
+      } else {
+        toastr.success("Video turned on");
+      }
+      return newVideoOff;
+    });
   };
 
   const endCall = () => {
@@ -125,7 +152,8 @@ function Room() {
     if (mediaStream) {
       mediaStream.getTracks().forEach((track) => track.stop());
     }
-    navigate("/"); // Navigate back to homepage
+    toastr.error("Call disconnected");
+    navigate("/");
   };
 
   return (
@@ -140,10 +168,10 @@ function Room() {
           <img src={end} alt="End call" />
         </button>
         <button className="mute" onClick={toggleMute}>
-          <img src={isAudioMuted ? unmute : mute} alt="Toggle mic" />
+          <img src={isAudioMuted ? mute : unmute} alt="Toggle mic" />
         </button>
         <button className="video-off" onClick={toggleVideo}>
-          <img src={isVideoOff ? on : off} alt="Toggle video" />
+          <img src={isVideoOff ? off : on} alt="Toggle video" />
         </button>
       </div>
     </div>
