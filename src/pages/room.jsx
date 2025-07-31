@@ -9,7 +9,7 @@ import unmute from "../assets/mic.png";
 import mute from "../assets/mute.png";
 import end from "../assets/end.png";
 
-// Configure toastr (optional styling)
+// Configure toastr
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
 toastr.options = {
